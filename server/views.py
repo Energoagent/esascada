@@ -1,11 +1,10 @@
 from django.shortcuts import render
 from rest_framework.response import Response
 from rest_framework.views import APIView
-#from rest_framework.renderers import JSONRenderer
-#import requests
-#from requests.exceptions import HTTPError
-import json
 import random
+import json
+import os
+from esascada.settings import BASE_DIR
 
 from server import config
 
@@ -20,20 +19,36 @@ def main(request):
 def switchgear_10(request):
     return render(request, 'switchgear_10.html', 
         context = {
-            'data_from_view': 'ESA SCADA',
             'mainmenu': config.mainmenu,
             }
         )
-     
+
+def svg_utils(request):
+    if request.method == 'GET':
+        return render(request, 'svg_utils.html', 
+            context = {
+                'mainmenu': config.mainmenu,
+                'contextmenu':{'convert': 'formmethod=get formaction=/convert/'}
+                }
+            )
+    
+
+def convert_dxf(request):
+    pass
+
 class Parameters(APIView):
     def get(self, request):
         if request.method == 'GET':
-            parameters = [{'id':'cell_01_current', 'value': str(random.randint(100, 400))}]
+            if config.elementstatus == 'on':
+                parameters = [{'id': 'cell_11_current', 'value': str(random.randint(100, 400))}]
+            else:    
+                parameters = [{'id': 'cell_11_current', 'value': 'off'}]
             return Response(parameters)
 
 class Control(APIView):
     def get(self, request):
         if request.method == 'GET':
-            status = {'id':'cell_01', 'value':'off'}
-            print('STATUS:', status);
+            reqJSON = json.loads(request.GET.get('controljson'))
+            status = {'id':reqJSON['id'], 'status':reqJSON['command']}
+            config.elementstatus = status['status']
             return Response(status)
