@@ -5,3 +5,4 @@
 *.jpg
 *.jpeg
 manage.py
+**/draft/

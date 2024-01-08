@@ -69,11 +69,12 @@ function svgScale() {
 };
 
 // создание pix сетки
-function drawPixelGrid(stepX, stepY){
-	let svgFloorPlan = document.getElementById("floor_plan")
-	if (svgFloorPlan) {
-		let maxX = Number(svgFloorPlan.getAttribute('width'));
-		let maxY = Number(svgFloorPlan.getAttribute('height'));
+function drawPixelGrid(pole_id, stepX, stepY){
+	let pole = document.getElementById(pole_id)
+console.log('DEBUG:', pole);
+	if (pole) {
+		let maxX = Number(pole.getAttribute('width'));
+		let maxY = Number(pole.getAttribute('height'));
 		if (stepX && (stepX > 0)) {
 			for(let x = 0; x < maxX; x = x + stepX) {
 				let line = document.createElementNS("http://www.w3.org/2000/svg", "line");
@@ -82,7 +83,7 @@ function drawPixelGrid(stepX, stepY){
 				line.setAttribute('y1', '0');
 				line.setAttribute('y2', String(maxY));
 				line.setAttribute('stroke', 'red');
-				svgFloorPlan.appendChild(line);
+				pole.appendChild(line);
 				let txt = document.createElementNS("http://www.w3.org/2000/svg", "text");
 				txt.setAttribute('y', '100');
 				txt.setAttribute('x', String(x));
@@ -90,7 +91,7 @@ function drawPixelGrid(stepX, stepY){
 				txt.style.font = 'Arial';
 				txt.style.fontSize = '20';
 				txt.innerHTML = String(x);
-				svgFloorPlan.appendChild(txt);
+				pole.appendChild(txt);
 			};
 		};
 		if (stepY && (stepY > 0)) {
@@ -101,7 +102,7 @@ function drawPixelGrid(stepX, stepY){
 				line.setAttribute('x1', '0');
 				line.setAttribute('x2', String(maxX));
 				line.setAttribute('stroke', 'red');
-				svgFloorPlan.appendChild(line);
+				pole.appendChild(line);
 				let txt = document.createElementNS("http://www.w3.org/2000/svg", "text");
 				txt.setAttribute('x', '100');
 				txt.setAttribute('y', String(y));
@@ -109,8 +110,7 @@ function drawPixelGrid(stepX, stepY){
 				txt.style.font = 'Arial';
 				txt.style.fontSize = '20';
 				txt.innerHTML = String(y);
-				svgFloorPlan.appendChild(txt);
-//console.log('DEBUG:', txt);
+				pole.appendChild(txt);
 			};
 		};
 	};

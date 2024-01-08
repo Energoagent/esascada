@@ -7,23 +7,94 @@
 	</defs>
 	<g stroke-width="1" fill="none" stroke="black">
 <!-- 1-ая секция шин -->
-		<rect x="80" y="100" width="880" height="12"/>
+		<rect x="80" y="100" width="1340" height="12"/>
 <!-- линейная ячейка старый символ-->
 		<use id="cell_11" data-type="cell" xlink:href="#line_cell" x="100" y="100" width="120" height="450" 
 			onclick="getControl('cell_11', 'on');" ondblclick="getControl('cell_11', 'off');"/>
-		<text id="cell_11_current" x="200" y="220px" font-size="28px" stroke="black" stroke-width="0.5" fill="black">000</text>
+		<foreignObject x="100" y="500" width="120" height="260" >
+			<div class="svg_embedded">
+				<p>яч 11</p>
+				<p>ТП-3 ввод 1</p>
+				<table>
+					<tr><td>Ток:</td><td id="cell_11_current">-</td></tr>
+				</table>
+			</div>
+		</foreignObject>			
 <!-- линейная ячейка выведена в ремонт-->
 		<use id="cell_13" xlink:href="#cell_wo_sw" x="300" y="100" width="120" height="450"/>
+		<foreignObject x="300" y="500" width="120" height="260" >
+			<div class="svg_embedded">
+				<p>яч 13</p>
+				<p>ТП-1 ввод 1</p>
+				<table>
+					<tr><td>Ток:</td><td id="">-</td></tr>
+				</table>
+			</div>
+		</foreignObject>			
 <!-- вводная ячейка 1 сш -->
 		<use id="cell_01" xlink:href="#cell_wo_line" x="500" y="100" width="120" height="450"/>
 		<use id="cell_01_sw" xlink:href="#switch" x="500" y="100" width="120" height="450"/>
+		<foreignObject x="500" y="500" width="120" height="260" >
+			<div class="svg_embedded">
+				<p>яч 1</p>
+				<p>ввод 1</p>
+				<table>
+					<tr><td>Ток:</td><td id="">-</td></tr>
+				</table>
+			</div>
+		</foreignObject>			
 <!-- секционный выключатель 1 сш -->
 		<use id="cell_03" xlink:href="#cell_wo_line" x="700" y="100" width="120" height="450"/>
 		<use id="cell_03_sw" xlink:href="#switch" x="700" y="100" width="120" height="450"/>
+		<foreignObject x="700" y="500" width="120" height="260" >
+			<div class="svg_embedded">
+				<p>яч 3</p>
+				<p>СВ 1 сш</p>
+				<table>
+					<tr><td>Ток:</td><td id="">-</td></tr>
+				</table>
+			</div>
+		</foreignObject>			
 <!-- линейная ячейка -->
 		<use id="cell_05" xlink:href="#cell_wo_sw" x="900" y="100" width="120" height="450"/>
 		<use id="cell_05_sw" xlink:href="#switch" x="900" y="100" width="120" height="450"/>
-
+		<foreignObject x="900" y="500" width="120" height="260" >
+			<div class="svg_embedded">
+				<p>яч 5</p>
+				<p>ТП-2 ввод 1</p>
+				<table>
+					<tr><td>Ток:</td><td id="">-</td></tr>
+				</table>
+			</div>
+		</foreignObject>			
+<!-- ТН 1 сш-->
+		<use id="cell_07" xlink:href="#TH" x="1040" y="100" width="180" height="450"/>
+		<foreignObject x="1080" y="500" width="120" height="260" >
+			<div class="svg_embedded">
+				<p>яч 7</p>
+				<p>ТН 1 сш</p>
+				<table>
+					<tr><td>Напряжение:</td><td id="">-</td></tr>
+				</table>
+			</div>
+		</foreignObject>			
+<!-- ТСН -->
+		<use id="cell_09" xlink:href="#cell_wo_line" x="1300" y="100" width="120" height="450"/>
+		<use id="cell_09_sw" xlink:href="#switch" x="1300" y="100" width="120" height="450"/>
+		<use id="cell_09_ton" xlink:href="#tr_own_need" x="1298" y="350" width="120" height="450"/>
+		<foreignObject x="1300" y="500" width="120" height="260" >
+			<div class="svg_embedded">
+				<p>яч 9</p>
+				<p>ТСН-1</p>
+				<table>
+					<tr><td>Ток:</td><td id="">-</td></tr>
+				</table>
+			</div>
+		</foreignObject>
+<!-- КЛ ввод 1 -->
+		<polyline points=" 10,40 100,40 40,60 140,60 120,45 120,75 140,60" />
 	</g>
 </svg>
+
+
 {% endblock %}

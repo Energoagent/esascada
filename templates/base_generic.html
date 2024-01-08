@@ -9,7 +9,7 @@
 
 		<link rel="stylesheet" href="../static/css/styles.css">
 		
-		<script src="../static/js/scripts.js"></script>
+<!--		<script src="../static/js/scripts.js"></script> -->
 		<script src="../static/js/switchgear_10.js"></script>
 	</head>
 	<body>
@@ -28,10 +28,13 @@
 	</div>
 	<div class="container-fluid">
 		<div class="col-sm-10">
-			<div class="row">
+			<div class="row" id="pole">
 			{% block content %} {% endblock %}
 			</div>
 		</div>
 	</div>
+	<script>
+<!--		drawPixelGrid("pole", 100, 100); -->
+	</script>
 	</body>
 </html>

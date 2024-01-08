@@ -92,7 +92,7 @@
 		</symbol>
 
 		
-		
+<!-- линейная ячейка без выключателя -->		
 		<symbol id="cell_wo_sw" fill="none" stroke-width="0.5" viewBox="0 0 40 150">
 			<!-- transformers -->
 			<line stroke="green" x1="22" y1="51" x2="23" y2="51" />
@@ -131,6 +131,7 @@
 			<line stroke="blue" x1="9" y1="118" x2="13" y2="118" />
 			<line stroke="blue" x1="11" y1="38" x2="11" y2="100" />
 		</symbol>
+<!-- ячейка без отходящей части -->
 		<symbol id="cell_wo_line" fill="none" stroke-width="0.5" viewBox="0 0 40 150">
 			<!-- transformers -->
 			<line stroke="green" x1="22" y1="51" x2="23" y2="51" />
@@ -162,8 +163,9 @@
 			<line stroke="blue" x1="11" y1="85" x2="25" y2="85" />
 			<circle stroke="blue" cx="11" cy="85" r="1"/>
 			<circle stroke="blue" cx="11" cy="2" r="1"/>
-			<line stroke="blue" x1="11" y1="38" x2="11" y2="100" />
+			<line stroke="blue" x1="11" y1="38" x2="11" y2="98" />
 		</symbol>
+<!-- ВВ -->
 		<symbol id="switch" stroke="black" fill="none" stroke-width="0.5" viewBox="0 0 40 150">
 			<line x1="11" y1="16" x2="14" y2="12" />
 			<line x1="8" y1="12" x2="11" y2="16" />
@@ -175,4 +177,52 @@
 			<line x1="12" y1="21" x2="10" y2="23" />
 			<line x1="10" y1="21" x2="12" y2="23" />
 			<line x1="11" y1="22" x2="11" y2="16" />
+		</symbol>
+<!-- трансформатор собственных нужд-->
+		<symbol id="tr_own_need" stroke="black" fill="none" stroke-width="0.5" viewBox="0 0 40 150">
+<!--			<line stroke="green" x1="12" y1="0" x2="12" y2="14" /> -->
+			<line stroke="green" x1="12" y1="34" x2="12" y2="28" />
+			<line stroke="green" x1="12" y1="38" x2="12" y2="44" />
+			<line stroke="green" x1="10" y1="34" x2="12" y2="38" />
+			<line stroke="green" x1="14" y1="34" x2="12" y2="38" />
+			<line stroke="green" x1="10" y1="34" x2="14" y2="34" />
+			<line stroke="green" x1="32" y1="23" x2="32" y2="25" />
+			<line stroke="green" x1="30" y1="22" x2="30" y2="26" />
+			<line stroke="green" x1="28" y1="21" x2="28" y2="27" />
+			<line stroke="green" x1="16" y1="24" x2="28" y2="24" />
+			<circle stroke="green" cx="12" cy="24" r="4"/>
+			<circle stroke="green" cx="12" cy="18" r="4"/>
+		</symbol>
+<!-- трансформатор напряжения-->
+		<symbol id="TH" stroke="black" fill="none" stroke-width="0.5" viewBox="0 0 40 150">
+			<line stroke="blue" x1="50" y1="19" x2="50" y2="21" />
+			<line stroke="blue" x1="48" y1="18" x2="48" y2="22" />
+			<line stroke="blue" x1="46" y1="17" x2="46" y2="23" />
+			<line stroke="blue" x1="40" y1="20" x2="46" y2="20" />
+			<line stroke="blue" x1="36" y1="16" x2="40" y2="20" />
+			<line stroke="blue" x1="34" y1="18" x2="34" y2="22" />
+			<rect x="18" y="44" width="4" height="12"/>
+			<line stroke="blue" x1="3" y1="50" x2="5" y2="50" />
+			<line stroke="blue" x1="6" y1="48" x2="2" y2="48" />
+			<line stroke="blue" x1="1" y1="46" x2="7" y2="46" />
+			<line stroke="blue" x1="4" y1="40" x2="4" y2="46" />
+			<line stroke="blue" x1="8" y1="32" x2="8" y2="28" />
+			<line stroke="blue" x1="0" y1="38" x2="8" y2="32" />
+			<line stroke="blue" x1="0" y1="44" x2="" y2="38" />
+			<rect x="2" y="30" width="4" height="10"/>
+			<circle stroke="blue" cx="20" cy="20" r="1"/>
+			<line stroke="blue" x1="20" y1="20" x2="34" y2="20" />
+			<line stroke="blue" x1="4" y1="20" x2="20" y2="20" />
+			<line stroke="blue" x1="4" y1="30" x2="4" y2="20" />
+			<circle stroke="blue" cx="20" cy="2" r="1"/>
+			<line stroke="blue" x1="12" y1="68" x2="16" y2="68" />
+			<line stroke="blue" x1="12" y1="76" x2="16" y2="76" />
+			<line stroke="blue" x1="11" y1="92" x2="13" y2="92" />
+			<line stroke="blue" x1="14" y1="90" x2="10" y2="90" />
+			<line stroke="blue" x1="9" y1="88" x2="15" y2="88" />
+			<line stroke="blue" x1="12" y1="68" x2="12" y2="88" />
+			<circle stroke="green" cx="26" cy="72" r="4"/>
+			<circle stroke="green" cx="20" cy="76" r="4"/>
+			<circle stroke="green" cx="20" cy="68" r="4"/>
+			<line stroke="blue" x1="20" y1="2" x2="20" y2="64" />
 		</symbol>
